@@ -1,0 +1,496 @@
+/* ==========================================
+   ANIMATIONS.CSS
+========================================== */
+
+/* Fade Up */
+
+@keyframes fadeUp{
+    0%{
+        opacity:0;
+        transform:translateY(60px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.fade-up{
+    animation:fadeUp .8s ease forwards;
+}
+
+/* Fade Left */
+
+@keyframes fadeLeft{
+
+    from{
+        opacity:0;
+        transform:translateX(-80px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+.fade-left{
+    animation:fadeLeft .8s ease;
+}
+
+/* Fade Right */
+
+@keyframes fadeRight{
+
+    from{
+        opacity:0;
+        transform:translateX(80px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+.fade-right{
+    animation:fadeRight .8s ease;
+}
+
+/* Zoom In */
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+        transform:scale(.7);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+.zoom-in{
+    animation:zoomIn .8s ease;
+}
+
+/* Floating */
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.float{
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+/* Rotate */
+
+@keyframes rotate360{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+.rotate{
+
+    animation:rotate360 10s linear infinite;
+
+}
+
+/* Pulse */
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+.pulse{
+
+    animation:pulse 2s infinite;
+
+}
+
+/* Gradient Background */
+
+@keyframes gradientMove{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+.hero{
+
+    background:
+    linear-gradient(-45deg,
+     #0f172a, 
+     #1e293b, 
+     #1b2048, 
+     #4332e4);
+
+    background-size:400% 400%;
+
+    animation:gradientMove 12s ease infinite;
+
+}
+
+/* Glow */
+
+@keyframes glow{
+
+    0%{
+
+        box-shadow:0 0 10px rgba(59,130,246,.3);
+
+    }
+
+    50%{
+
+        box-shadow:0 0 40px rgba(59,130,246,.8);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 10px rgba(59,130,246,.3);
+
+    }
+
+}
+
+.glow{
+
+    animation:glow 2s infinite;
+
+}
+
+/* Hero Image */
+
+.hero-image img{
+
+    animation:floating 5s ease-in-out infinite;
+
+}
+
+/* Floating Cards */
+
+.floating-card{
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+.card2{
+
+    animation-delay:.5s;
+
+}
+
+.card3{
+
+    animation-delay:1s;
+
+}
+
+.card4{
+
+    animation-delay:1.5s;
+
+}
+
+/* Card Hover */
+
+.project-card,
+.skill-card,
+.service-card,
+.education-card,
+.counter-box{
+
+    transition:.4s;
+
+}
+
+.project-card:hover,
+.skill-card:hover,
+.service-card:hover,
+.education-card:hover,
+.counter-box:hover{
+
+    transform:translateY(-15px) scale(1.03);
+
+}
+
+/* Icon Animation */
+
+.social-icons a{
+
+    transition:.4s;
+
+}
+
+.social-icons a:hover{
+
+    transform:translateY(-8px) rotate(360deg);
+
+}
+
+/* Navbar */
+
+.glass-nav{
+
+    transition:.4s;
+
+}
+
+.glass-nav.scrolled{
+
+    background:rgba(10,15,30,.95);
+
+    backdrop-filter:blur(25px);
+
+}
+
+/* Button Hover */
+
+.btn{
+
+    transition:.35s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* Image Hover */
+
+.project-image img{
+
+    transition:.6s;
+
+}
+
+.project-card:hover img{
+
+    transform:scale(1.12);
+
+}
+
+/* Skill Circle */
+
+.circle{
+
+    transition:1s;
+
+}
+
+.skill-card:hover .circle{
+
+    transform:rotate(360deg);
+
+}
+*/
+/* Shine Effect */
+
+.project-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.2),
+        transparent
+    );
+
+}
+
+.project-card:hover::before{
+
+    left:120%;
+
+    transition:1s;
+
+}
+
+/* Typing Cursor */
+
+.typed-cursor{
+
+    color:#3b82f6;
+
+    font-size:32px;
+
+}
+
+/* Back To Top */
+
+#backToTop{
+
+    transition:.4s;
+
+}
+
+#backToTop:hover{
+
+    transform:rotate(360deg);
+
+}
+
+/* Scroll Reveal */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    transition:1s;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* Loader */
+
+.loader-circle{
+
+    animation:rotate360 1s linear infinite;
+
+}
+
+/* Progress Bar */
+
+#progress-bar{
+
+    transition:width .2s linear;
+
+}
+
+/* Smooth Hover */
+
+a,
+button,
+img{
+
+    transition:.3s;
+
+}
+
+/* Animation Delay */
+
+.delay1{
+
+    animation-delay:.2s;
+
+}
+
+.delay2{
+
+    animation-delay:.4s;
+
+}
+
+.delay3{
+
+    animation-delay:.6s;
+
+}
+
+.delay4{
+
+    animation-delay:.8s;
+
+}
+
+/* END */
